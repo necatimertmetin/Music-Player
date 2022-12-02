@@ -1,0 +1,246 @@
+body{
+    margin: 0;
+    background-image: url('Abstract-3d-art-background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+.glass-card{
+    border-bottom-right-radius: 10vw !important;
+    border-bottom-left-radius: 10vw !important;
+    border-top-left-radius: 50px !important;
+    border-top-right-radius: 50px !important;
+    
+
+    width: 30vw;
+    height: 35vw;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    /*backdrop-filter: blur(6.6px);
+    -webkit-backdrop-filter: blur(6.6px);*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+}
+.music-image{
+    
+    height: 10vw;
+    width: 10vw;
+    background-image: url('wallhaven-y86g17.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10vw !important;
+    
+    transform: translateZ(50px);
+    -webkit-box-shadow: 0px 0px 54px 11px rgba(0,0,0,0.19);
+    -moz-box-shadow: 0px 0px 54px 11px rgba(0,0,0,0.19);
+    box-shadow: 0px 0px 54px 11px rgba(0,0,0,0.19);
+    
+}
+.music-name{
+
+    transform: translateZ(50px);
+    text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.5);
+    font-size: 4vw;
+    
+}
+.artist-name{
+    transform: translateZ(50px);
+    text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.5);
+    font-size: 2vw;
+}
+.play-pause-button{
+    background-image: url('play.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.5);
+    behavior: smooth;
+    transform: translateZ(50px);
+    background-color: transparent;
+    width: 5vw;
+    height: 5vw;
+    border-radius: 5vw;
+    border-color: transparent;
+    cursor: pointer;
+    transition-duration: 0.5s;
+    font-size: 1vw;
+    font-weight: 600;
+    color:white;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.play-pause-button:hover{
+    box-shadow: 0 4px 30px rgba(255, 255, 255, 1);
+    transition-duration: 0.5s;
+    background-color: white;
+    transform: translateZ(-40px);
+    transform: translateY(10px);
+    color:black;
+}
+.play-pause-button:active{
+    background-color: gray;
+
+}
+.volume-slider{
+    margin-top: 5vh;
+    transform: translateZ(50px);
+    width: 20vw;
+    border-radius: 20vw;
+    border-color: black;
+    border-style: solid;
+    appearance: none;
+    background: rgba(128, 128, 128, 0.5);
+    outline: none;
+    
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+.volume-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    
+    border-radius: 20vw;
+    width: 50px;
+    height: 25px;
+    background: black;
+    cursor: pointer;
+  }
+  
+  .volume-slider::-moz-range-thumb {
+    
+    border-radius: 20vw;
+    width: 25px;
+    height: 25px;
+    background: black;
+    cursor: pointer;
+  }
+
+  @media (orientation: portrait) {
+    .glass-card{
+        border-radius: 10vw !important;
+        
+    
+        width: 30vh;
+        height: 50vh;
+        background: rgba(255, 255, 255, 0.2);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        /*backdrop-filter: blur(6.6px);
+        -webkit-backdrop-filter: blur(6.6px);*/
+        display: flex;
+        flex-direction: column;
+        justify-content: column;
+        align-items: center;
+        transform-style: preserve-3d;
+    }
+
+    .music-image{
+    
+        height: 10vh;
+        width: 10vh;
+        background-image: url('wallhaven-y86g17.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 10vw !important;
+        
+        transform: translateZ(150px);
+        -webkit-box-shadow: 0px 0px 54px 11px rgba(0,0,0,0.19);
+        -moz-box-shadow: 0px 0px 54px 11px rgba(0,0,0,0.19);
+        box-shadow: 0px 0px 54px 11px rgba(0,0,0,0.19);
+        
+    }
+
+    .music-name{
+
+        transform: translateZ(150px);
+        text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.5);
+        font-size: 4vh;
+        
+    }
+    .artist-name{
+        transform: translateZ(150px);
+        text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.5);
+        font-size: 3vh;
+    }
+
+    .play-pause-button{
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 1);
+        behavior: smooth;
+        transform: translateZ(150px);
+        background-color: transparent;
+        width: 6vh;
+        height: 6vh;
+        cursor: pointer;
+        transition-duration: 0.5s;
+        font-size: 1vh;
+        font-weight: 600;
+        color:white;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+    .play-pause-button:hover{
+        box-shadow: 0 4px 30px rgba(255, 255, 255, 1);
+        transition-duration: 0.5s;
+        background-color: white;
+        transform: translateZ(-40px);
+        transform: translateY(20px);
+        color:black;
+    }
+
+    .volume-slider{
+        margin-top: 5vh;
+        transform: translateZ(150px);
+        width: 15vh;
+        border-radius: 20vw;
+        border-color: black;
+        border-style: solid;
+        outline: none;
+        background: rgba(128, 128, 128, 0.5);
+        
+        -webkit-transition: .2s;
+        transition: opacity .2s;
+    }
+    .volume-slider::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        
+        border-radius: 20vw;
+        width: 50px;
+        height: 25px;
+        background: black;
+        cursor: pointer;
+      }
+      
+      .volume-slider::-moz-range-thumb {
+        
+        border-radius: 20vw;
+        width: 25px;
+        height: 25px;
+        background: black;
+        cursor: pointer;
+      }
+    
+  }
+
+
