@@ -31,18 +31,14 @@ body{
 }
 .music-image{
     
-    height: 10vw;
-    width: 10vw;
-    background-image: url('wallhaven-y86g17.jpg');
+    height: 13vw;
+    width: 13vw;
+    background-image: url('Radiosso-logos_transparent.png');
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 10vw !important;
+    background-size: 18vw;
     
-    transform: translateZ(50px);
-    -webkit-box-shadow: 0px 0px 54px 11px rgba(0,0,0,0.19);
-    -moz-box-shadow: 0px 0px 54px 11px rgba(0,0,0,0.19);
-    box-shadow: 0px 0px 54px 11px rgba(0,0,0,0.19);
+    transform: translateZ(70px);
     
 }
 .music-name{
@@ -65,7 +61,7 @@ body{
     text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.5);
     behavior: smooth;
     transform: translateZ(50px);
-    background-color: #1fdbfe;
+    background-color: transparent;
     width: 5vw;
     height: 5vw;
     border-radius: 5vw;
@@ -149,16 +145,13 @@ body{
     
         height: 10vh;
         width: 10vh;
-        background-image: url('wallhaven-y86g17.jpg');
+        background-image: url('Radiosso-logos_transparent.png');
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
         border-radius: 10vw !important;
         
         transform: translateZ(150px);
-        -webkit-box-shadow: 0px 0px 54px 11px rgba(0,0,0,0.19);
-        -moz-box-shadow: 0px 0px 54px 11px rgba(0,0,0,0.19);
-        box-shadow: 0px 0px 54px 11px rgba(0,0,0,0.19);
         
     }
 
@@ -176,32 +169,33 @@ body{
     }
 
     .play-pause-button{
-        box-shadow: 0 4px 30px rgba(0, 0, 0, 1);
+        text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.5);
         behavior: smooth;
         transform: translateZ(150px);
+        background-size: cover;
         width: 6vh;
         height: 6vh;
         cursor: pointer;
         transition-duration: 0.5s;
         font-size: 1vh;
         font-weight: 600;
-        color:white;
         -webkit-touch-callout: none;
         -webkit-user-select: none;
         -khtml-user-select: none;
         -moz-user-select: none;
         -ms-user-select: none;
         user-select: none;
-        background-color: #3fcbde;
+        background-color: transparent;
     }
     
     .play-pause-button:hover{
         box-shadow: 0 4px 30px rgba(255, 255, 255, 1);
         transition-duration: 0.5s;
+        background-color: white;
+        color: white;
         transform: translateZ(-40px);
         transform: translateY(20px);
-        color:black;
-        background-color: #3fcbde;
+        background-color: transparent;
         
     }
 
