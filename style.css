@@ -14,16 +14,12 @@ body{
 
 
 .glass-card{
-    border-bottom-right-radius: 10vw !important;
-    border-bottom-left-radius: 10vw !important;
-    border-top-left-radius: 50px !important;
-    border-top-right-radius: 50px !important;
     
 
     width: 30vw;
     height: 35vw;
     background: rgba(255, 255, 255, 0.2);
-    border-radius: 16px;
+    border-radius: 5vw;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     /*backdrop-filter: blur(6.6px);
     -webkit-backdrop-filter: blur(6.6px);*/
@@ -65,11 +61,11 @@ body{
     background-image: url('play.png');
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 6vw;
     text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.5);
     behavior: smooth;
     transform: translateZ(50px);
-    background-color: transparent;
+    background-color: #1fdbfe;
     width: 5vw;
     height: 5vw;
     border-radius: 5vw;
@@ -122,7 +118,6 @@ body{
     background: black;
     cursor: pointer;
   }
-  
   .volume-slider::-moz-range-thumb {
     
     border-radius: 20vw;
@@ -184,7 +179,6 @@ body{
         box-shadow: 0 4px 30px rgba(0, 0, 0, 1);
         behavior: smooth;
         transform: translateZ(150px);
-        background-color: transparent;
         width: 6vh;
         height: 6vh;
         cursor: pointer;
@@ -198,14 +192,17 @@ body{
         -moz-user-select: none;
         -ms-user-select: none;
         user-select: none;
+        background-color: #3fcbde;
     }
+    
     .play-pause-button:hover{
         box-shadow: 0 4px 30px rgba(255, 255, 255, 1);
         transition-duration: 0.5s;
-        background-color: white;
         transform: translateZ(-40px);
         transform: translateY(20px);
         color:black;
+        background-color: #3fcbde;
+        
     }
 
     .volume-slider{

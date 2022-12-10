@@ -1,79 +1,110 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Radio Deneme</title>
-        <link rel="stylesheet" href="style.css">
-        <script src="script.js"></script>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
-        <script src="howler.js-2.2.3\dist\howler.js"></script>
-        
-    </head>
-    <body>
-        
-        
 
-           
-            <div id="glass-card" class="glass-card" data-tilt data-tilt-max="5" data-tilt-reverse="true" data-tilt-reset="false" data-tilt-glare data-tilt-max-glare="0.5" data-tilt-full-page-listening>
-                
-                    <div id="music-image" class="music-image">
+<head>
+    <title>Radio Deneme</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <script src="howler.js-2.2.3\dist\howler.js"></script>
 
-                    </div>
-                    <div class="music-name">
-                        
-                            MUSIC NAME
-                        
-                        
-                    </div>
-                    <div class="artist-name">
-                        
-                            ARTIST NAME
-                        
-                    </div>
-                    <button id="button" type="button" class="play-pause-button" onclick="playPauseFunc()"></button>
-                    <input type="range" min="1" max="1000" value="1000" class="volume-slider" id="volume-slider" onchange="volumeFunc()">
+</head>
 
-                
-                
-            
-           
+<body>
 
-            
+
+
+
+    <div id="glass-card" class="glass-card" data-tilt data-tilt-max="5" data-tilt-reverse="true" data-tilt-reset="false"
+        data-tilt-glare data-tilt-max-glare="0.5" data-tilt-full-page-listening>
+
+        <div id="music-image" class="music-image">
+
         </div>
+        <div class="music-name">
 
-        <script src="vanilla-tilt.js"></script>
-        <script>
-            var sound = new Howl({
-            src: ['music.mp3'],
+            MUSIC NAME
+
+
+        </div>
+        <div class="artist-name">
+
+            ARTIST NAME
+
+        </div>
+        <button id="button" type="button" class="play-pause-button" onclick="playPauseFunc()"></button>
+        <input type="range" min="1" max="1000" value="1000" class="volume-slider" id="volume-slider"
+            onchange="volumeFunc()">
+
+
+
+
+
+
+
+    </div>
+    <!-- <iframe src="https://zeno.fm/player/radiosso" width="768" height="300" frameborder="0" scrolling="no"></iframe><a href="https://zeno.fm/" target="_blank" style="display: block; font-size: 0.9em; line-height: 10px;">A Zeno.FM Station</a> -->
+    <script src="script.js"></script>
+    <script src="vanilla-tilt.js"></script>
+    <script>
+        var sound = new Howl({
+            src: "https://stream-41.zeno.fm/c1u04kot8m6uv?zs=pxopskRFTtyZ1rRdocXW3g",
+            format: ['mp3', 'aac'],
+            html5: true,
             volume: 0.8
-            });
-  
+        });
 
-            var iter = 2
-            function playPauseFunc(){
-                var playButton = document.getElementById('button');
-                if(iter%2 === 0){
-                    sound.play();
-                    playButton.style.backgroundImage = "url('pause.png')";
-                }
-                else if(iter%2 != 0){
-                    sound.pause();
-                    playButton.style.backgroundImage = "url('play.png')";
-                }
-                iter++;
+
+        var iter = 2
+        function playPauseFunc() {
+            var playButton = document.getElementById('button');
+            if (iter % 2 === 0) {
+                sound.play();
+                playButton.style.backgroundImage = "url('pause.png')";
             }
-            var volumeSlider = document.getElementById('volume-slider')
-            function volumeFunc(){
-                
-                Howler.volume(volumeSlider.value / 1000.0);
+            else if (iter % 2 != 0) {
+                sound.pause();
+                playButton.style.backgroundImage = "url('play.png')";
             }
-            var i = 0;
+            iter++;
+        }
+        var volumeSlider = document.getElementById('volume-slider')
+        function volumeFunc() {
+
+            Howler.volume(volumeSlider.value / 1000.0);
+        }
+        var i = 0;
 
 
-           
-            
-        </script>
 
-    </body>
+
+    </script>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyAIhVNcZSzbklZxZOs-EHDk4Oy4qDaQCq8",
+          authDomain: "radiosso-d1a5d.firebaseapp.com",
+          projectId: "radiosso-d1a5d",
+          storageBucket: "radiosso-d1a5d.appspot.com",
+          messagingSenderId: "674444792473",
+          appId: "1:674444792473:web:3cbe0e6f77496ebb255e08",
+          measurementId: "G-XFBH4R6W8B"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+      </script>
+
+</body>
+
 </html>
